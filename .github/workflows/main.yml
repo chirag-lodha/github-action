@@ -1,0 +1,12 @@
+name: hello github actions
+on:
+  push:
+    branches: [main]
+jobs:
+  greet:
+    runs-on: ubuntu-latest       # ✅ Fixed: hyphen, not colon
+    steps:
+      - name: hello users        # ✅ Fixed: space after hyphen, proper spacing
+        run: echo "hello users"  # ✅ Fixed: 'run' not 'runs', space after colon
+      - name: "hello user 10"    # ✅ Fixed: closing quote, proper spacing
+        run: echo "hello user 10" # ✅ Fixed: space after colon
