@@ -1,0 +1,21 @@
+name: workflow dispatch manual
+on: workflow_dispatch
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: git push
+        run: echo "on git push"
+        
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run-docker-build
+        run: echo "docker build -t image ."
+        
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run docker-deploy
+        run: echo "docker exec"
