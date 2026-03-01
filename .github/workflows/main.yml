@@ -10,3 +10,8 @@ jobs:
         run: echo "hello users"  # ✅ Fixed: 'run' not 'runs', space after colon
       - name: "hello user 10"    # ✅ Fixed: closing quote, proper spacing
         run: echo "hello user 10" # ✅ Fixed: space after colon
+  dockerVersion :
+    runs-on: ubuntu-latest
+    steps:
+      - name: docker version
+        run: docker --version
